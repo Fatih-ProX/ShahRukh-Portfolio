@@ -1,0 +1,326 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">MyPortfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content text-center">
+                <h1 class="hero-name">Shah Rukh Syed</h1>
+                <p class="hero-description">
+                    <span id="job-role"></span><span class="cursor">|</span>
+                </p>
+                <div class="hero-buttons">
+                    <a href="#hire-me" class="btn btn-primary btn-glow">Hire Me</a>
+                    <a href="#portfolio" class="btn btn-outline-light btn-glow">View Portfolio</a>
+                </div>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="section-padding about-section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-container">
+                <!-- Profile Image Card -->
+                <div class="profile-card">
+                    <img src="path/to/your-profile-image.jpg" alt="Shah Rukh Syed" class="profile-img">
+                </div>
+                <!-- About Text -->
+                <div class="about-text-card">
+                    <p>
+                        I’m Shah Rukh Syed, a passionate Software Engineer with over 2 years of experience in crafting innovative IT solutions. From developing custom applications to automating workflows and optimizing systems, I excel at turning complex challenges into scalable, efficient outcomes. With a Master’s in Information Technology, ample knowledge of Artificial Intelligence, and expertise in full-stack development, I’m driven to deliver impactful tech that powers organizational success.
+                    </p>
+                </div>
+                <!-- Info Cards -->
+                <div class="info-cards">
+                    <div class="info-card">
+                        <h3>Name</h3>
+                        <p>Shah Rukh Syed</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Email</h3>
+                        <p>180031189cse@gmail.com</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Location</h3>
+                        <p>Spring Hill, TN</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Freelance</h3>
+                        <p>Available</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Subtle Background Animation -->
+        <div class="about-background">
+            <div class="glow-dot dot-1"></div>
+            <div class="glow-dot dot-2"></div>
+            <div class="glow-dot dot-3"></div>
+        </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <div class="container">
+            <h2 class="section-title neon-text text-center mb-5">Projects</h2>
+            <div class="row g-4">
+                <!-- Launchpad Project -->
+                <div class="col-lg-6">
+                    <div class="project-card glass-card hover-glow">
+                        <h3 class="project-title">Launchpad - ServiceNow Portal</h3>
+                        <p class="project-overview">
+                            Designed and implemented a secure Identity Access Management (IAM) solution for TennCare workers and partners. Created a "one-stop shop" portal for accessing all TennCare applications.
+                        </p>
+                        <div class="project-details">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Service Portal with 15+ custom pages (Dashboard, My Profile, My Requests, etc.)</li>
+                                <li>Custom widgets and flows using Flow Designer</li>
+                                <li>Integrated encryption/decryption for secure data handling</li>
+                                <li>Styled portal according to design team specifications</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-badge">ServiceNow</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">Flow Designer</span>
+                            <span class="tech-badge">HTML/CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Integrations Project -->
+                <div class="col-lg-6">
+                    <div class="project-card glass-card hover-glow">
+                        <h3 class="project-title">ServiceNow Integrations</h3>
+                        <p class="project-overview">
+                            Implemented integrations with Microsoft Teams, ChatGPT, and Outlook to streamline workflows and enhance collaboration within ServiceNow.
+                        </p>
+                        <div class="project-details">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Microsoft Teams integration for real-time notifications</li>
+                                <li>ChatGPT integration for AI-powered assistance</li>
+                                <li>Outlook integration for seamless email workflows</li>
+                                <li>Custom REST APIs and middleware development</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-badge">ServiceNow</span>
+                            <span class="tech-badge">REST APIs</span>
+                            <span class="tech-badge">Microsoft Teams</span>
+                            <span class="tech-badge">ChatGPT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Skills Section -->
+    <section class="skills-section">
+        <!-- Background Floating Elements -->
+        <div class="floating-elements">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+        </div>
+
+        <div class="container">
+            <h2 class="section-title neon-text text-center mb-5">Skills</h2>
+            <div class="row g-4">
+                <!-- Web Development -->
+                <div class="col-md-6">
+                    <div class="skill-category glass-card hover-glow">
+                        <h3 class="category-title">Web Development</h3>
+                        <div class="skill">
+                            <p>HTML/CSS</p>
+                            <div class="progress-bar" data-progress="95"></div>
+                        </div>
+                        <div class="skill">
+                            <p>JavaScript</p>
+                            <div class="progress-bar" data-progress="90"></div>
+                        </div>
+                        <div class="skill">
+                            <p>Python</p>
+                            <div class="progress-bar" data-progress="85"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frontend Technologies -->
+                <div class="col-md-6">
+                    <div class="skill-category glass-card hover-glow">
+                        <h3 class="category-title">Frontend Technologies</h3>
+                        <div class="skill">
+                            <p>React</p>
+                            <div class="progress-bar" data-progress="80"></div>
+                        </div>
+                        <div class="skill">
+                            <p>Angular</p>
+                            <div class="progress-bar" data-progress="75"></div>
+                        </div>
+                        <div class="skill">
+                            <p>Bootstrap</p>
+                            <div class="progress-bar" data-progress="90"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="col-md-6">
+                    <div class="skill-category glass-card hover-glow">
+                        <h3 class="category-title">Tools</h3>
+                        <div class="skill">
+                            <p>ServiceNow</p>
+                            <div class="progress-bar" data-progress="95"></div>
+                        </div>
+                        <div class="skill">
+                            <p>Git</p>
+                            <div class="progress-bar" data-progress="85"></div>
+                        </div>
+                        <div class="skill">
+                            <p>Visual Studio Code</p>
+                            <div class="progress-bar" data-progress="90"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other Skills -->
+                <div class="col-md-6">
+                    <div class="skill-category glass-card hover-glow">
+                        <h3 class="category-title">Other Skills</h3>
+                        <div class="skill">
+                            <p>REST APIs</p>
+                            <div class="progress-bar" data-progress="85"></div>
+                        </div>
+                        <div class="skill">
+                            <p>ITSM</p>
+                            <div class="progress-bar" data-progress="90"></div>
+                        </div>
+                        <div class="skill">
+                            <p>ITAM</p>
+                            <div class="progress-bar" data-progress="80"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Column 1: Logo & Short Bio -->
+                <div class="col-lg-4">
+                    <div class="footer-column">
+                        <img src="logo.png" alt="Logo" class="footer-logo">
+                        <p class="footer-bio">
+                            A passionate IT professional with expertise in ServiceNow development, web development, and cloud solutions. Let's build something amazing together!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="col-lg-4">
+                    <div class="footer-column">
+                        <h3 class="footer-heading">Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Column 3: Contact Information -->
+                <div class="col-lg-4">
+                    <div class="footer-column">
+                        <h3 class="footer-heading">Contact Info</h3>
+                        <ul class="footer-contact">
+                            <li><i class="fas fa-envelope"></i> shahrukh@example.com</li>
+                            <li><i class="fas fa-phone"></i> +91 9110344452</li>
+                        </ul>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright Notice -->
+            <div class="footer-bottom text-center">
+                <p class="copyright">© 2024 Shah Rukh Syed. All Rights Reserved.</p>
+            </div>
+
+            <!-- Scroll-to-Top Button -->
+            <div class="scroll-to-top">
+                <a href="#top" class="btn btn-primary btn-glow"><i class="fas fa-arrow-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Background Shapes -->
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
