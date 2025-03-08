@@ -1,3 +1,4 @@
+// Job Role Typing Animation
 const jobRoles = [
     "ServiceNow Developer",
     "IT Support Specialist",
@@ -32,7 +33,7 @@ function typeWriter() {
             setTimeout(() => {
                 isPaused = false;
                 isDeleting = true;
-            }, 2000);
+            }, 2000); // Pause after typing
         }
     } else if (isDeleting && !isPaused) {
         // Deleting phase
@@ -41,7 +42,7 @@ function typeWriter() {
 
         if (currentCharIndex === 0) {
             isDeleting = false;
-            currentRoleIndex = (currentRoleIndex + 1) % jobRoles.length;
+            currentRoleIndex = (currentRoleIndex + 1) % jobRoles.length; // Move to next role
         }
     }
 
@@ -53,7 +54,7 @@ function typeWriter() {
     setTimeout(typeWriter, speed);
 }
 
-// Start animation
+// Start typing animation after page loads
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(typeWriter, 1000);
 });
@@ -77,7 +78,8 @@ document.querySelectorAll('[data-tooltip]').forEach(el => {
     });
 });
 
-// Animate progress bars
+
+// Animate Progress Bars
 document.querySelectorAll('.progress-bar').forEach(bar => {
     const progress = bar.getAttribute('data-progress');
     bar.style.setProperty('--progress', `${progress}%`);
@@ -85,11 +87,11 @@ document.querySelectorAll('.progress-bar').forEach(bar => {
 
 
 // Custom Cursor
-const cursor = document.querySelector('.custom-cursor');
+const customCursor = document.querySelector('.custom-cursor');
 
 document.addEventListener('mousemove', (e) => {
-    cursor.style.left = `${e.pageX}px`;
-    cursor.style.top = `${e.pageY}px`;
+    customCursor.style.left = `${e.pageX}px`;
+    customCursor.style.top = `${e.pageY}px`;
 });
 
 // Add hover effect to interactive elements
@@ -97,12 +99,28 @@ const hoverElements = document.querySelectorAll('a, button, .hover-glow, .btn, .
 
 hoverElements.forEach(el => {
     el.addEventListener('mouseenter', () => {
-        cursor.classList.add('hover');
+        customCursor.classList.add('hover');
     });
     el.addEventListener('mouseleave', () => {
-        cursor.classList.remove('hover');
+        customCursor.classList.remove('hover');
     });
 });
+
+
+// Smooth Scroll for All Anchor Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
 
 // Smooth Scroll-to-Top Button
 document.querySelector('.scroll-to-top a').addEventListener('click', (e) => {
@@ -111,4 +129,33 @@ document.querySelector('.scroll-to-top a').addEventListener('click', (e) => {
         top: 0,
         behavior: 'smooth'
     });
+});
+
+
+// EmailJS Integration for Contact Form
+(function () {
+    emailjs.init('YOUR_EMAILJS_USER_ID'); // Replace with your EmailJS User ID
+})();
+
+document.querySelector('.contact-form form').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Add loading state
+    const submitBtn = this.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...';
+
+    // Send email using EmailJS
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+        .then(() => {
+            alert('Message sent successfully!');
+            this.reset(); // Reset form after successful submission
+        })
+        .catch((error) => {
+            alert('Error sending message: ' + error.text);
+        })
+        .finally(() => {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Message'; // Reset button text
+        });
 });
